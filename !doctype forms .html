@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Forms</title>
+</head>
+<body>
+<form action="index.html" method="get" onsubmit="return validate()">
+<lable>Name</lable>
+<input type="text" id="lname" name="tname"><span id="stn"></span>
+<br><br>
+<lable>Password</lable>
+<input type="password" id="lpass" name="tpass"><span id="spass"></span>
+<br><br>
+<lable>Confirm Password</lable>
+<input type="password" id="lcpass" name="tcpass"><span id="scpass"></span>
+<br><br>
+<lable>Male</lable>
+<input type="radio" id="lm" name="tm" >
+<lable>Female</lable>
+
+<input type="radio" id="lf" name="tm" ><span id="sf"></span><br><br>
+
+<label>Department</label>
+<select id="lcourse" name="tcourse">
+<option value="-1">--Select--</option>
+<option value="it">IT</option>
+<option value="cse">CSE</option>
+<option value="eee">EEE</option>
+<option value="ece">ECE</option>
+</select>
+<span id="ds"></span>
+<br><br>
+<input type="submit">
+</form>
+</body>
+
+
+
+<script type="text/javascript">
+
+let istext=true;
+let ispass=true;
+let iscpass=true;
+let isgeng=true;
+let isds=true;
+function validate()
+{
+
+if(document.getElementById("lname").value==="")
+{
+document.getElementById("stn").innerHTML="enter the name"
+document.getElementById("stn").style.color="red"
+istext=false
+}
+else
+{
+document.getElementById("stn").innerHTML="valid"
+document.getElementById("stn").style.color="green"
+istext=true
+}
+
+if(document.getElementById("lpass").value==="")
+{
+document.getElementById("spass").innerHTML="enter the password"
+document.getElementById("spass").style.color="red"
+ispass=false
+}
+else
+{
+document.getElementById("spass").innerHTML="valid"
+document.getElementById("spass").style.color="green"
+ispass=true
+}
+
+if(document.getElementById("lcpass").value==="")
+{
+document.getElementById("scpass").innerHTML="enter the password"
+document.getElementById("scpass").style.color="red"
+iscpass=false
+}
+else if(document.getElementById("lcpass").value !== document.getElementById("lpass").value)
+{
+document.getElementById("scpass").innerHTML="give the same passowrd"
+document.getElementById("scpass").style.color="blue"
+iscpass=false
+
+}
+else 
+{
+document.getElementById("scpass").innerHTML="valid"
+document.getElementById("scpass").style.color="green"
+iscpass=true
+}
+
+if(document.getElementById("lm").checked!=true && document.getElementById("lf").checked!=true)
+{
+document.getElementById("sf").innerHTML="please click one"
+document.getElementById("sf").style.color="red"
+isgeng=false
+}
+else
+{
+document.getElementById("sf").innerHTML="valid"
+document.getElementById("sf").style.color="green"
+isgeng=true
+}
+
+if (document.getElementById("lcourse").value == "-1") {
+document.getElementById("ds").innerHTML = "please select one";
+document.getElementById("ds").style.color = "red";
+isds = false;
+} else {
+document.getElementById("ds").innerHTML = "valid";
+document.getElementById("ds").style.color = "green";
+isds = true;
+}
+
+ 
+return istext && ispass && iscpass && isgeng && isds;
+
+}
+
+</script>
+
+</html>
