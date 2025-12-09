@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<meta charset:utf-8>
+<head>
+<title>form</title>
+</head>
+<body>
+<form  action="index.html" method="get" onsubmit="return validate()" onreset ="return resetval()">
+<label>Enter your Name:</label>
+<input type="text" id="tn" name="tname"><span id="spant"></span>
+<br></br>
+<label>Enter your password:</label>
+<input type="password" id="ps" name="pname"><span id="spanp"></span>
+<br></br>
+<label>Enter your confirm password:</label>
+<input type="password" id="cs" name="pname1"><span id="spanc"></span>
+<br></br>
+<label>Click the Gender: </label><input type="radio" id="g" name="male"><label>Male</label>
+</label><input type="radio" id="g1" name="female"><label>Female</label>
+<span id="spang"></span>
+<br></br>
+<label>Select a Course: </label>
+<select id="course" name="courses">
+<option value="a1">----Select Courses----</option>
+<option value="a2">C Programming</option>
+<option value="a3">Mern Stack</option>
+<option value="a4">C++ Programming</option>
+<option value="a5">Python Programming</option>
+</select>
+<span id="spancs"></span>
+<br></br>
+
+<input type="SUBMIT" value="click">
+<br></br>
+<input type="reset" value="Reset">
+
+
+</form>
+
+<script type="text/javascript">
+function validate()
+{
+let istextname=true;
+var a=document.getElementById("tn") .value
+ if(a==="")
+{
+document.getElementById("spant").innerHTML="Enter the name";
+document.getElementById("spant").style.color="red";
+ istextname=false;
+}
+else
+{
+ document.getElementById("spant").innerHTML="valid";
+document.getElementById("spant").style.color="green";
+istextname=false;
+
+}
+let b=document.getElementById("ps").value
+if(b==="")
+{
+document.getElementById("spanp").innerHTML="Enter the password";
+document.getElementById("spanp").style.color="red";
+ istextname=false;
+}
+else
+{
+ document.getElementById("spanp").innerHTML="valid";
+document.getElementById("spanp").style.color="green";
+istextname=false;
+}
+let c=document.getElementById("cs").value
+if(c==="")
+{
+document.getElementById("spanc").innerHTML="Enter the confirm password";
+document.getElementById("spanc").style.color="red";
+ istextname=false;
+}
+else if(b!=c)
+{
+document.getElementById("spanc").innerHTML="Enter the correct password";
+document.getElementById("spanc").style.color="red";
+ istextname=false;
+}
+else
+{
+ document.getElementById("spanc").innerHTML="valid";
+document.getElementById("spanc").style.color="green";
+ istextname=false;
+}
+let d=document.getElementById("course").value;
+if(d==="a1")
+{
+document.getElementById("spancs").innerHTML="Fill the course";
+document.getElementById("spancs").style.color="red";
+istextname=false;
+}
+else
+{
+document.getElementById("spancs").innerHTML="valid";
+document.getElementById("spancs").style.color="green";
+ istextname=false;
+
+}
+let e=document.getElementById("g").checked
+let f=document.getElementById("g1").checked
+if(e != true && f !=true )
+{
+document.getElementById("spang").innerHTML="choose the gender";
+document.getElementById("spang").style.color="red";
+ istextname=false;
+}
+else
+{
+ document.getElementById("spang").innerHTML="valid";
+document.getElementById("spang").style.color="green";
+istextname=false;
+}
+
+return istextname;
+}
+
+function resetval()
+
+{
+document.getElementById("tn").value=" " ;
+document.getElementById("ps").value=" " ;
+document.getElementById("cs").value=" " ;
+document.getElementById("g").checked=false; 
+document.getElementById("g1").checked=false; 
+document.getElementById("course").value="-1";
+document.getElementById("spant").innerHTML="";
+document.getElementById("spanp").innerHTML="";
+document.getElementById("spanc").innerHTML="";
+document.getElementById("spang").innerHTML="";
+document.getElementById("spang1").innerHTML="";
+
+}
+</script>
+</body>
+</html>
+
+
