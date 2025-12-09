@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Third Layout</title>
+<meta charset="utf-8">
+
+<style>
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:arial;
+}
+
+#maindiv {
+    width:80%;
+    margin:auto;
+}
+
+#logo {
+    width:100%;
+    background-color:lightgrey;
+    min-height:40px;
+    line-height:40px;
+    padding-left:20px;
+    margin-top:10px;
+}
+
+#parent {
+    width:100%;
+    display:flex;
+    margin-top:10px;
+    gap:20px;
+}
+
+#sidebar {
+    width:25%;
+    min-height:300px;
+    padding:10px;
+    line-height:25px;
+}
+
+#rightside {
+    width:75%;
+}
+
+#header {
+    width:100%;
+    background-color:lightgrey;
+    min-height:80px;
+    text-align:center;
+    line-height:80px;
+    margin-bottom:20px;
+}
+
+#bodyarea {
+    width:100%;
+    background-color:lightgrey;
+    min-height:250px;
+    text-align:center;
+    line-height:250px;
+}
+
+#footer {
+    width:100%;
+    background-color:lightgrey;
+    min-height:30px;
+    line-height:30px;
+    text-align:center;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+<div id="maindiv">
+
+<div id="logo">
+<p>Logo</p>
+</div>
+
+<div id="parent">
+<div id="sidebar">
+<p>Side bar<br>Navigation</p>
+</div>
+
+<div id="rightside">
+<div id="header">
+<p>Header / Banner</p>
+</div>
+<div id="bodyarea">
+<p>Body Area</p>
+</div>
+</div>
+</div>
+
+<div id="footer">
+<p>Footer</p>
+</div>
+</div>
+</body>
+</html>

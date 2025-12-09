@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Second Layout</title>
+<meta charset="utf-8">
+
+<style>
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:arial;
+}
+
+#maindiv {
+    width:80%;
+    margin:auto;
+}
+#logonav {
+    width:100%;
+    background-color:lightgrey;
+    min-height:40px;
+    line-height:40px;
+    display:flex;
+    justify-content:space-between;
+    padding:0 20px;
+    margin-top:10px;
+}
+
+#header {
+    width:100%;
+    background-color:lightgrey;
+    min-height:80px;
+    line-height:80px;
+    text-align:center;
+    margin:10px 0;
+}
+
+
+#intro {
+    width:100%;
+    background-color:lightgrey;
+    min-height:50px;
+    line-height:100px;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+#boxes {
+    width:100%;
+    display:flex;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.box {
+    width:33.33%;
+    background-color:lightgrey;
+    min-height:150px;
+    line-height:300px;
+    text-align:center;
+}
+
+#footer {
+    width:100%;
+    background-color:lightgrey;
+    min-height:30px;
+    line-height:30px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+<div id="maindiv">
+
+<div id="logonav">
+<p>Logo</p>
+<p>Navigation</p>
+</div>
+
+<div id="header">
+<p>Header / Banner</p>
+</div>
+
+<div id="intro">
+<p>Intro Text Area</p>
+</div>
+
+<div id="boxes">
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
+<div class="box">Box 3</div>
+</div>
+
+<div id="footer">
+<p>Footer</p>
+</div>
+</div>
+</body>
+</html>
